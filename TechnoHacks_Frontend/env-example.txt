@@ -1,0 +1,14 @@
+To create .env files for different environments= you can follow these rules:
+1. Determine the different environments you want to work. 
+2. Common environments include production= staging= and development.
+3. Create a separate .env file for each environment with specific name
+4. The naming convention for the files typically includes the environment name as a suffix.
+    - Default: .env
+
+5. Define environment variables in each .env file specific to that environment. 
+6. Each variable should be defined on a new line in the format KEY=VALUE.
+
+Use below environment variables for this project.
+
+
+NEXT_SERVER_URL=

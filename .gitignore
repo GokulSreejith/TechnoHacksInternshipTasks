@@ -1,0 +1,56 @@
+## /TechnoHacks_Frontend
+
+# dependencies
+/TechnoHacks_Frontend/node_modules
+/TechnoHacks_Frontend/.pnp
+/TechnoHacks_Frontend/.pnp.js
+
+# testing
+/TechnoHacks_Frontend/coverage
+
+# next.js
+/TechnoHacks_Frontend/.next/
+/TechnoHacks_Frontend/out/
+
+# production
+/TechnoHacks_Frontend/build
+
+# misc
+/TechnoHacks_Frontend/.DS_Store
+/TechnoHacks_Frontend/*.pem
+
+# debug
+/TechnoHacks_Frontend/npm-debug.log*
+/TechnoHacks_Frontend/yarn-debug.log*
+/TechnoHacks_Frontend/yarn-error.log*
+
+# local env files
+/TechnoHacks_Frontend/.env*.local
+/TechnoHacks_Frontend/.env*
+
+# vercel
+/TechnoHacks_Frontend/.vercel
+
+# typescript
+/TechnoHacks_Frontend/*.tsbuildinfo
+/TechnoHacks_Frontend/next-env.d.ts
+
+
+
+## /TechnoHacks_Backend
+
+# dependencies
+/TechnoHacks_Backend/node_modules
+/TechnoHacks_Backend/.pnp
+/TechnoHacks_Backend/.pnp.js
+# production
+/TechnoHacks_Backend/dist/
+
+# misc
+/TechnoHacks_Backend/.DS_Store
+/TechnoHacks_Backend/.env*
+
+/TechnoHacks_Backend/npm-debug.log*
+/TechnoHacks_Backend/yarn-debug.log*
+/TechnoHacks_Backend/yarn-error.log*
+/TechnoHacks_Backend/yarn.lock

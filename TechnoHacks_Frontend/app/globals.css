@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 1px rgb(139, 92, 246), 1px 2px 1px rgb(139, 92, 246), 1px 3px 1px rgb(139, 92, 246),
+      1px 4px 1px rgb(139, 92, 246), 1px 5px 1px rgb(139, 92, 246), 1px 6px 1px rgb(139, 92, 246),
+      1px 7px 1px rgb(139, 92, 246), 1px 8px 1px rgb(139, 92, 246), 1px 9px 1px rgb(139, 92, 246),
+      1px 10px 1px rgb(139, 92, 246), 1px 18px 6px rgba(139, 92, 246, 0.4), 1px 22px 10px rgba(242, 153, 194, 0.2),
+      1px 25px 35px rgba(242, 153, 194, 0.2), 1px 30px 60px rgba(139, 92, 246, 0.4);
+  }
+}
+
+/* Counter */
+.counter-container {
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/37/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+p {
+  text-align: center;
+}
+.flip-clock-wrapper {
+  max-width: 460px;
+  margin: 3em auto 2em;
+  display: flex;
+  justify-content: center;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+}
+.clock {
+  margin-top: 30px;
+}
+.container {
+  width: 500px;
+}
+.middle {
+  display: inline-block;
+}
+#btns {
+  display: flex;
+  justify-content: center;
+}
+#stop {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn {
+  background-color: #333333;
+  color: #cccccc;
+}
+#sessInc,
+#sessDec,
+#breakInc,
+#breakDec {
+  font-weight: bold;
+}
+#stats {
+  background-color: #333333;
+  width: 220px;
+  height: 70px;
+  border-radius: 10px;
+  color: #cccccc;
+  font-size: 45px;
+  text-align: center;
+}
+#statRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
