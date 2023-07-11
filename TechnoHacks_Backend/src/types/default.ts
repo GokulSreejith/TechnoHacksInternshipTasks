@@ -1,6 +1,6 @@
 /* Imported Modules */
 import { Response, NextFunction } from 'express';
-import { IAdmin, IRequest, IUser } from '../interfaces';
+import { IRequest, IUser } from '../interfaces';
 
 /* Custom Types */
 export type ApiParams = (
@@ -17,4 +17,4 @@ export type LoggerParams = (
 
 export type IDeleted = 'YES' | 'NO' | 'BOTH';
 
-export type IRoles = 'Guest' | IAdmin['role'] | IUser['role'];
+export type IRoles = 'Guest' | IUser['role'];
