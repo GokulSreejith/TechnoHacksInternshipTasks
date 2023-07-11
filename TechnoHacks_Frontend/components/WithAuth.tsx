@@ -1,5 +1,5 @@
 import { LocalStorageKeys } from '@/core/localStorageKeys';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Loader from './Loader';
 import { useRouter } from 'next/navigation';
 
@@ -7,10 +7,11 @@ const WithAuth = (Component: React.ComponentType) => {
   return function WithAuth(props: any) {
     const router = useRouter();
 
-    // Simulate authentication check
-    const isAuthenticated = localStorage.getItem(LocalStorageKeys.adminToken);
+    const [isAuthenticated, setAuthenticate] = useState<string | null>(null);
 
     useEffect(() => {
+      setAuthenticate(localStorage.getItem(LocalStorageKeys.adminToken));
+
       if (!isAuthenticated) {
         router.replace("/login")
       }

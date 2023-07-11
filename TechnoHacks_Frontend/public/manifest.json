@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Base Next App",
-  "short_name": "Base App",
-  "description": "Base Next App",
+  "name": "TechnoHacks",
+  "short_name": "TechnoHacks",
+  "description": "TechnoHacks",
   "icons": [
     {
       "src": "/icons/maskable.png",
