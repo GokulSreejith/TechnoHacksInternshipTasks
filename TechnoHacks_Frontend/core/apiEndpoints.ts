@@ -1,7 +1,9 @@
 class ApiEndpoints {
   static serverURL: string =
     process.env.NEXT_SERVER_URL ||
-    'https://server.technohacks.gokulsreejith.com';
+    //  process.env.NODE_ENV == 'development' ?
+    'http://localhost:5000';
+  //  : 'https://server.technohacks.gokulsreejith.com';
 
   static baseURL: string = `${this.serverURL}/api/v1`;
 

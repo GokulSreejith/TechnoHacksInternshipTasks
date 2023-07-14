@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: [CLIENT_DOMAIN],
+    origin: [CLIENT_DOMAIN, 'http://localhost:3000'],
     credentials: true,
     allowedHeaders: ['Authorization', 'Content-Type'],
   })

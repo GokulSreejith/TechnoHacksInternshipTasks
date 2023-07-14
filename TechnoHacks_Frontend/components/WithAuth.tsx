@@ -1,3 +1,4 @@
+"use client"
 import { LocalStorageKeys } from '@/core/localStorageKeys';
 import { useEffect, useState } from 'react';
 import Loader from './Loader';
@@ -7,18 +8,20 @@ const WithAuth = (Component: React.ComponentType) => {
   return function WithAuth(props: any) {
     const router = useRouter();
 
-    const [isAuthenticated, setAuthenticate] = useState<string | null>(null);
+    const [isAuthenticated, setAuthenticate] = useState<boolean>(false);
 
     useEffect(() => {
-      setAuthenticate(localStorage.getItem(LocalStorageKeys.adminToken));
+      const token = localStorage.getItem(LocalStorageKeys.adminToken);
+      setAuthenticate(!!token);
 
-      if (!isAuthenticated) {
-        router.replace("/login")
+      if (!token) {
+        router.replace("/login");
       }
-    }, [isAuthenticated, router])
+    }, [router]);
 
 
     if (!isAuthenticated) {
+
       // Render a loading state or a login form
       return <Loader />
     }

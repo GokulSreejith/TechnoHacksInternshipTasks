@@ -8,23 +8,25 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
 const HomePage = () => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState<boolean>(true);
   const [user, setUser] = useState<IUser>();
 
   const router = useRouter();
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     // Get the user profile
-    getProfile().then((resp: any) => {
-      setUser(resp.data);
-      setLoading(false);
-    }).catch((err: any) => {
-      doLogoutService()
-      router.replace('/login');
-      setLoading(false);
-    })
-  }, [router])
+    getProfile()
+      .then((resp: any) => {
+        setUser(resp.data);
+        setLoading(false);
+      })
+      .catch((err: any) => {
+        doLogoutService();
+        router.replace('/login');
+        setLoading(false);
+      });
+  }, [router]);
 
 
   return (
@@ -90,4 +92,4 @@ const HomePage = () => {
   )
 }
 
-export default WithAuth(HomePage)
+export default WithAuth(HomePage);

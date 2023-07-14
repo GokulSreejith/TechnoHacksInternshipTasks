@@ -54,3 +54,5 @@
 /TechnoHacks_Backend/yarn-debug.log*
 /TechnoHacks_Backend/yarn-error.log*
 /TechnoHacks_Backend/yarn.lock
+# Local Netlify folder
+.netlify

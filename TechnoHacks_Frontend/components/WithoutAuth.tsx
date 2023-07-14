@@ -6,15 +6,16 @@ import { useRouter } from 'next/navigation';
 const WithoutAuth = (Component: React.ComponentType) => {
     return function WithoutAuth(props: any) {
         const router = useRouter();
-        const [isAuthenticated, setAuthenticate] = useState<string | null>(null);
+        const [isAuthenticated, setAuthenticate] = useState<boolean>(false);
 
         useEffect(() => {
-            setAuthenticate(localStorage.getItem(LocalStorageKeys.adminToken));
-            if (isAuthenticated) {
-                router.replace("/")
-            }
-        }, [isAuthenticated, router])
+            const token = localStorage.getItem(LocalStorageKeys.adminToken);
+            setAuthenticate(!!token);
 
+            if (token) {
+                router.replace("/");
+            }
+        }, [router]);
 
         if (isAuthenticated) {
             // Render a loading state or a login form
