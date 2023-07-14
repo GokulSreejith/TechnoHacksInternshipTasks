@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Counter (TASK-8)',
-  description: 'Counter (TASK-8)',
+  title: 'Countdown (TASK-5)',
+  description: 'Countdown (TASK-5)',
 }
 
 export default function RootLayout({

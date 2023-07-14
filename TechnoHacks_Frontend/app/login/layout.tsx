@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Login (TASK-9)',
+  title: 'Login (TASK-7)',
   description: 'Login for user (TASK-8)',
 }
 
